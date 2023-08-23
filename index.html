@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Icon Template Square</title>
+    <style>
+        .row{
+            width:720px;
+            margin: 10px auto 10px auto ;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: honeydew;">
+    <div class="row">
+        <div class="image-container"><img id="circ" src="img/cir.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="tria" src="img/tri.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="squa" src="img/squ.png" height="200" width="200"/></div>
+    </div>
+
+
+    <div class="row">
+        <div class="image-container"><img id="hexa" src="img/hex.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="rect" src="img/rec.png" height="200" width="200"/></div>
+        <div class="image-container"><img src="img/sta.png" height="200" width="200"/></div>
+        </div>
+
+    <div class="row">
+        <div class="image-container"><img src="img/trr.png" height="200" width="200"/></div>
+        <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
+        <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
+
+    <script>
+        var sound1 = new buzz.sound ("sound/Bolts Falling.wav")
+        var sound2 = new buzz.sound ("sound/Climbing Stairs.wav")
+        var sound3 = new buzz.sound ("sound/Power Switch.wav")
+        var sound4 = new buzz.sound ("sound/Restaurant Beeper.wav")
+        var sound5 = new buzz.sound ("sound/Soda Can.wav")
+
+        window.onload = function() {
+        document.getElementById("circ").addEventListener("click", function () {sound1.play();});
+        document.getElementById("tria").addEventListener("click", function () {sound2.play();});
+        document.getElementById("squa").addEventListener("click", function () {sound3.play();});
+        document.getElementById("hexa").addEventListener("click", function () {sound4.play();});
+        document.getElementById("rect").addEventListener("click", function () {sound5.play();});
+        }
+    </script>
+
+</body>
+    
+</html>
