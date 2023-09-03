@@ -16,60 +16,94 @@
     </style>
 </head>
 
-<body style="background-color: honeydew;">
+<body style="background-color: #442e24;">
     <div class="row">
-        <div class="image-container"><img id="circ" src="img/cir.png" height="200" width="200"/></div>
-        <div class="image-container"><img id="tria" src="img/tri.png" height="200" width="200"/></div>
-        <div class="image-container"><img id="squa" src="img/squ.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="Visual" src="img/Visual 1.jpeg" height="200" width="200"/></div>
+        <div class="image-container"><img id="Audio" src="img/Audio 1.jpeg" height="200" width="200"/></div>
+        <div class="image-container"><img id="Emotion" src="img/Emotion 1.jpeg" height="200" width="200"/></div>
     </div>
 
 
     <div class="row">
-        <div class="image-container"><img id="hexa" src="img/hex.png" height="200" width="200"/></div>
-        <div class="image-container"><img id="rect" src="img/rec.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/sta.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="Smell" src="img/Smell 1.jpeg" height="200" width="200"/></div>
+        <div class="image-container"><img id="Touch" src="img/Touch 1.jpeg" height="200" width="200"/></div>
+        <div class="image-container"><img id="Proprioception" src="img/Proprioception 1.jpeg" height="200" width="200"/></div>
         </div>
 
     <div class="row">
-        <div class="image-container"><img src="img/trr.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="Record" src="img/Record 1.jpeg" height="200" width="200"/></div>
+        <div class="image-container"><img id="Upload" src="img/Upload 1.jpeg" height="200" width="200"/></div>
+        <div class="image-container"><img id="Delete" src="img/Delete 1.jpg" height="200" width="200"/></div>
     </div>
+
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
 
     <script>
-        var sound1 = new buzz.sound ("sound/Bolts Falling.wav")
-        var sound2 = new buzz.sound ("sound/Climbing Stairs.wav")
-        var sound3 = new buzz.sound ("sound/Power Switch.wav")
-        var sound4 = new buzz.sound ("sound/Restaurant Beeper.wav")
-        var sound5 = new buzz.sound ("sound/Soda Can.wav")
+        var image = document.querySelector('Visual 1.jpeg');
+
+        image.onclick = function() {
+        image.src = 'Visual 2.jpeg';
+};
+    </script>
+
+
+    <script>
+        var sound1 = new buzz.sound ("sound/Camera Shutter.mp3")
+        var sound2 = new buzz.sound ("sound/Mic Tapping.mp3")
+        var sound3 = new buzz.sound ("sound/Happy.mp3")
+        var sound4 = new buzz.sound ("sound/Sniffing.mp3")
+        var sound5 = new buzz.sound ("sound/Interface.mp3")
+        var sound6 = new buzz.sound ("sound/Movement.mp3")
+        var sound7 = new buzz.sound ("sound/Record.mp3")
+        var sound8 = new buzz.sound ("sound/Upload.mp3")
+        var sound9 = new buzz.sound ("sound/Garbage Can.mp3")
 
         window.onload = function() {
-            document.getElementById("circ").addEventListener("click", function () {
+            document.getElementById("Visual").addEventListener("click", function () {
                 console.log (`click on circle detected!`)
                 console.dir (sound1.getDuration ())
                 sound1.play();
             });
-            document.getElementById("tria").addEventListener("click", function () {
+            document.getElementById("Audio").addEventListener("click", function () {
                 console.log (`click on triangle detected!`)
                 console.dir (sound2.getDuration ())
                 sound2.play();
             });
-            document.getElementById("squa").addEventListener("click", function () {
+            document.getElementById("Emotion").addEventListener("click", function () {
                 console.log (`click on square detected!`)
                 console.dir (sound3.getDuration ())
                 sound3.play();
             });
-            document.getElementById("hexa").addEventListener("click", function () {
+            document.getElementById("Smell").addEventListener("click", function () {
                 console.log (`click on hexagon detected!`)
                 console.dir (sound4.getDuration ())
                 sound4.play();
             });
-            document.getElementById("rect").addEventListener("click", function () {
+            document.getElementById("Touch").addEventListener("click", function () {
                 console.log (`click on rectangle detected!`)
                 console.dir (sound5.getDuration ())
                 sound5.play();
+            });
+            document.getElementById("{Proprioception}").addEventListener("click", function () {
+                console.log (`click on prop detected!`)
+                console.dir (sound6.getDuration ())
+                sound6.play();
+            });
+            document.getElementById("Record").addEventListener("click", function () {
+                console.log (`click on record detected!`)
+                console.dir (sound7.getDuration ())
+                sound7.play();
+            });
+            document.getElementById("Upload").addEventListener("click", function () {
+                console.log (`click on upload detected!`)
+                console.dir (sound8.getDuration ())
+                sound8.play();
+            });
+            document.getElementById("Delete").addEventListener("click", function () {
+                console.log (`click on delete detected!`)
+                console.dir (sound9.getDuration ())
+                sound9.play();
             });
         }
 
