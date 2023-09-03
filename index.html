@@ -46,12 +46,41 @@
         var sound5 = new buzz.sound ("sound/Soda Can.wav")
 
         window.onload = function() {
-        document.getElementById("circ").addEventListener("click", function () {sound1.play();});
-        document.getElementById("tria").addEventListener("click", function () {sound2.play();});
-        document.getElementById("squa").addEventListener("click", function () {sound3.play();});
-        document.getElementById("hexa").addEventListener("click", function () {sound4.play();});
-        document.getElementById("rect").addEventListener("click", function () {sound5.play();});
+            document.getElementById("circ").addEventListener("click", function () {
+                console.log (`click on circle detected!`)
+                console.dir (sound1.getDuration ())
+                sound1.play();
+            });
+            document.getElementById("tria").addEventListener("click", function () {
+                console.log (`click on triangle detected!`)
+                console.dir (sound2.getDuration ())
+                sound2.play();
+            });
+            document.getElementById("squa").addEventListener("click", function () {
+                console.log (`click on square detected!`)
+                console.dir (sound3.getDuration ())
+                sound3.play();
+            });
+            document.getElementById("hexa").addEventListener("click", function () {
+                console.log (`click on hexagon detected!`)
+                console.dir (sound4.getDuration ())
+                sound4.play();
+            });
+            document.getElementById("rect").addEventListener("click", function () {
+                console.log (`click on rectangle detected!`)
+                console.dir (sound5.getDuration ())
+                sound5.play();
+            });
         }
+
+        document.body.onpointerdown = audioCheck
+
+        function audioCheck () {
+            if (buzz.audioCtx.state != 'running') {
+                buzz.audioCtx.resume ()
+            }
+        }
+
     </script>
 
 </body>
